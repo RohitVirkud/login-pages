@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WELCOME</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
+  <style type="text/css">
+  	*
+		{
+			margin:0;
+			padding: 0;
+			font-family: Poppins;
+
+		}
+		body
+	 	{
+	    height: 100vh;
+        display: flex;   
+       background: url('iphone-mobile-phone-48605 (1).jpg');
+       background-size:cover;
+       background-position: center;
+       transition: background 0.5s ease;
+       position: relative;
+		}
+		.navbar
+		{
+			
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			background-color: white;
+			width: 100%;
+			height: 70px;
+			z-index: 1;
+			
+			position: fixed;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+		}
+		.nav
+		{
+			display: flex;
+			justify-content: row;
+			list-style: none;
+			margin-right: 8%;
+			margin-left: 60px;
+		
+			background-color: white;
+			border-radius: 50px;
+
+		}
+		.logo
+		{
+			flex: 1 1 auto;
+			margin-left: 4%;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: bold;
+			font-size: 35px;
+			transition:  0.4s;
+			text-decoration: none;
+			color: #000;
+
+		}
+		.logo:hover
+		{
+        font-size: 40px;
+        color: black;
+
+		}
+		li a
+		{
+			margin: 15px;
+			color: #000;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: opacity 0.4s;
+			padding: 1px 20px;
+			position:inline-block;
+            display:block;
+            transition: 0.5s;
+            
+		}
+		li a:hover
+		{
+			
+		
+            color: orange;
+            opacity: 0.90;
+            font-size:20px;
+  
+
+		}
+
+		
+		/*.navbar:hover ul li:not(:hover)
+		{
+			opacity: 0.5;
+
+		}*/
+    .formContainer
+    {
+      background-color: rgba(0,0,0,0.2);
+      width: 450px;
+      height: 400px;
+      margin-left: 120%;
+      margin-top: 35%;
+      border-radius: 10px;
+    }
+		.active
+		{
+			color: orange;
+		}
+   .container ,.menu-container
+	 {
+	   display: none;
+	 }
+	   
+
+    .field-email
+    {
+    	position: absolute;
+    	top: 40%;
+    	left: 50%;
+    	transform: translate(-50%,-50%);
+    	background:white;
+    	height: 50px;
+    	width: 400px; 
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	border-radius: 5px;
+    	transition: all 0.5s ease;
+    }
+
+    .field-password
+    {
+      position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%,-50%);
+    	background:white;
+    	height: 50px;
+    	width: 400px; 
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	border-radius: 5px;
+    	transition: all 0.5s ease;	
+    }
+
+
+    .field-submit
+    {
+    	position: absolute;
+    	top: 60%;
+    	left: 50%;
+    	transform: translate(-50%,-50%);
+    	background:white;
+    	height: 50px;
+    	width: 400px; 
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	border-radius: 5px;
+    	transition: all 0.5s ease;	
+    }
+    .field-submit:hover
+    {
+         color: orange;
+    }
+    .field-link
+    {
+      position: absolute;
+      top: 65%;
+      left: 47%;
+
+    }
+     .field-link1
+    {
+      position: absolute;
+      top: 68%;
+      left: 49%;
+
+    }
+    
+
+    
+    .field-email input,
+    .field-password input,
+    .field-submit input
+    {
+       background: none;
+       border: none;
+       flex: 1;
+       height: 100%;
+       outline: none;
+    }
+    .field-email i,
+    .field-password i,
+    .field-submit i
+    {
+    	padding: 10px;
+    	cursor: pointer;
+    }
+    .sub
+    {
+    	font-size: 22px;
+    	font-style: italic;
+      color: orange;
+      transition: 0.5s;
+    	
+    }
+    .sub:hover
+    {
+       font-size: 23px;
+     
+    }
+
+    .submit:hover
+    {
+    	background-color: white;
+    	box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    	font-size: 18px;
+    	border-radius: 20px;
+    	color: orange;
+
+    }
+
+    @keyframes shake
+    {
+    	0%{
+                 transform: translate(-50%,-50%) rotate(0deg);
+    	}
+
+    	50%{
+                 transform: translate(-50%,-50%) rotate(10deg);
+    	}
+    	100%{
+                 transform: translate(-50%,-50%) rotate(0deg);
+    	}
+    }
+/* for Mobile Devices */
+@media screen and (max-width: 786px)
+{
+	.navbar
+	{
+		display: none;
+	}
+	 .container 
+    {
+    	display: block;
+    }
+  
+
+.container,.menu-container,.mobilepic
+{
+    	display: block;
+}
+   
+
+	.container .image
+{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+}
+.container .menu-icon
+{
+	position: absolute;
+	color: black;
+	font-size: 30px;
+	left:42px;
+	top: 24px;
+	cursor: pointer;
+	z-index: 1;
+	position: fixed;
+}
+
+.menu-container
+{
+	height: 0%;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	background: rgba(0,0,0,0.8);
+	overflow: hidden;
+	transition: 1s ease-in-out;
+}
+.menu-content
+{
+	position: relative;
+	top:25%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.menu-content a
+{
+	padding: 16px;
+	text-decoration: none;
+	font-size: 18px;
+	color: white;
+	display: block;
+	font-family: sans-serif;
+	transition: .3s ease-in-out;
+	transition: 0.4s;
+}
+.menu-content a:hover
+{
+	/*background-color: #1b998b;
+	padding-bottom: .5rem;
+	border-bottom: .1rem solid #fff;
+	margin-right: 45%;
+	margin-left: 45%;*/
+	color: black;
+	font-size: 25px;
+
+}
+.menu-container .closebtn
+{
+	position: absolute;
+	top: 36px;
+	right: 48px;
+	font-size: 30px;
+	color: white;
+	z-index: 1;
+	cursor: pointer;
+}
+.innerLogo
+{
+	display: block;
+	margin-top: 35px;
+}
+
+.field-email,
+.field-password,
+.field-submit 
+{
+	margin: 0 2px;
+	 width: 300px;
+
+}
+
+
+
+
+}
+  </style>
+  </head>
+  <body>
+  	
+   <!--Nav Bars-->
+  	<div class="container">
+ 	<span class="menu-icon" onclick="openMenu()">&#9776</span>
+ </div>
+	<div class="menu-container" id="navbar"><center class="innerLogo"
+		>YOUR BRAND NAME</center>
+ 	<span class="closebtn" onclick="closeMenu()">&times;</span>
+ 	<div class="menu-content">
+ 		<a href="#">HOME</a>
+ 		<a href="#">ABOUT</a>
+ 		<a href="#">PORTFOLIO</a>
+ 		<a href="#">CONTACT</a>
+ 	</div>
+ </div>
+ 
+
+
+  <div class="navbar">
+    	<a href="#" class="logo">YOUR BRAND NAME</a>
+    	<ul class="nav">
+    		<li><a href="#" class="active">Home</a></li>
+    		<li><a href="#">About</a></li>
+    		<li><a href="#">Portfolio</a></li>
+    		<li><a href="#">Services</a></li>
+    		<li><a href="#">Contact</a></li>
+    	</ul>
+    </div>
+     
+
+
+
+    <form action="" method="POST"> 
+       <div class="field-email innactive">
+     	  	<i class="fas fa-envelope"></i>
+
+     	  	<input type="email" name="email" placeholder="Email" required> 
+     	  </div>
+
+
+     	  <div class="field-password innactive">
+     	  	<i class="fas fa-key"></i>
+     	  	<input type="password" name="password" placeholder="password" required>   
+     	  </div>  
+        
+        <div class="field-submit innactive">    
+     	  	<input type="submit" name="submit" value="submit" class="sub"> 
+     	  </div>
+     
+   </form>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--javascript here-->
+<script type="text/javascript">
+	
+	function closeMenu()
+	{
+		document.getElementById("navbar").style.height = "0%";
+
+	}
+
+	function openMenu()
+	{
+		document.getElementById("navbar").style.height = "100%";
+	}	
+
+
+
+
+
+	/*--*/
+
+
+	function validateuser(user)
+	{
+        if(user.value.length < 6)
+        {
+        	console.log('not enough characters');
+        	error('rgb(189,87,87)');
+
+        }
+        else
+        {
+        	error('rgb(87,189,130)');
+        	return true;
+        }
+	}
+
+
+	
+    function validateEmail(email)
+    {
+    	const validation = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    	if(validation.test(email.value))
+    	{
+    		
+    		return true;
+    	}
+    	else
+    	{
+    		console.log('email is not valid');
+        	
+    	}
+    }
+    
+   function nextSlide(parent,nextForm)
+   {
+         parent.classList.add('innactive');
+         parent.classList.remove('active');
+         nextForm.classList.add('active');
+
+   }
+
+
+
+	
+  </script>
+  </body>
+  </html>
