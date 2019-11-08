@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MY LOGIN PAGE </title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <style type="text/css">
+       body
+       {
+        font-family: Popins;
+        background: url("adult-blur-businessman-288477.jpg") no-repeat;
+        background-position: center;
+        background-size: cover;
+       }
+      .login,.register
+      {
+        /*display: flex;*/
+        justify-content: center;
+        align-items: center;
+            height: 100vh;
+            width: 100%;
+            
+            display: none;
+           
+
+      }
+    .container
+    {
+      display: flex;
+      flex-direction: column;
+       border-radius: 10px;
+       background-color: white;
+      border: 1px solid black;
+      padding: 70px 30px;
+      animation: fadeInBottom 0.5s linear forwards;
+          animation-delay: 0.5s;
+          opacity: 0;
+          max-width: 400px;
+
+
+    }
+    .a
+    {
+      display: flex;
+      
+
+    }
+    
+
+      @keyframes fadeInBottom
+        {
+          0%
+          { 
+            transform: translateY(50px);
+               opacity: 0;
+          }
+          100%
+          {
+            transform: translateY(0px);
+            opacity: 0.9;
+
+          }
+        }
+
+       
+         
+
+  </style>
+        
+</head>
+<body>
+  <div class="login a">
+   <div class="container">
+     <form method="post" action="homepage.html">
+       <h3 style="color: green; text-align: center;">ADMIN LOGIN</h3><br>
+      <input type="text" name="username" placeholder="
+      Your name" class="form-control" required=""><br>
+      <input type="password" name="password" placeholder="
+      Password" class="form-control" required=""><br>
+      <input type="submit" name="submit" class="btn btn-success form-control" value="LOGIN">
+     </form><br>
+     <a href="#" class="btn btn-info form-control" onclick="create()">REGISTER</a>
+   </div> 
+</div>
+</body>
+
+
+
+
+
+   <div class="register">
+   <div class="container ">
+     <form method="post" action="join.html">
+       <h3 style="color: green; text-align: center;">CREATE ACCOUNT</h3><br>
+       <input type="name" name="name" placeholder="
+      Full Name" class="form-control" required=""><br>
+      <input type="email" name="email" placeholder="
+      Email" class="form-control" required=""><br>
+      <input type="password" name="password" placeholder="
+      Password" class="form-control" required=""><br>
+      <input type="submit" name="create" class="btn btn-success form-control" value="CREATE NEW ACCOUNT">   
+     </form><br>
+     <a href="#" class="btn btn-info form-control" onclick="change()">LOGIN</a>
+   </div> 
+</div>
+</html>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+   const login = document.querySelector('.login');
+    const register = document.querySelector('.register')
+
+  function change() {
+    // body...
+      
+      login.classList.add('a');
+      register.classList.remove('a');
+      
+    }
+    function create()
+    {
+      
+      register.classList.add('a');
+       login.classList.remove('a');
+    }
+
+  
+</script>
+</body>
+</html>
