@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login | frontend</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <style type="text/css">
+    	body
+    	{
+    		 background-color: #000000;
+    		 color: #fff;
+    	}
+    	.navbar
+    	{
+    		width: 100%;
+    		height: 7vh;
+    		background-color: #E50914;
+    		color: #fff;
+    		display: flex;
+    		justify-content: center;
+    		justify-content: space-around;
+    		align-items: center;
+    		position: fixed;
+    		border-bottom-left-radius: 80px;
+    		border-bottom-right-radius: 80px; 
+    		animation: fadeIn 1s linear forwards;
+            opacity: 0;
+    	}
+    	.btn
+    	{
+    		background-color: #E50914;
+    		color: white;
+    	}
+    	.formx
+    	{
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1s linear forwards;
+            animation-delay: 1s;
+            opacity: 0;
+    	}
+    	.backlinks
+    	{
+    		display: flex;
+    		justify-content: space-between;
+    		width: 100%;
+    	}
+    	a{
+    		color: white;
+    	}
+    	a:hover,a:focus
+    	{
+    		color: #E50914;
+    		text-decoration: none;
+    	}
+    	p{
+    		font-size: 15px;
+    		color: #ddd;
+    	}
+
+    	@media screen and (min-width: 1200px)
+    	{
+    		.container
+    		{
+    			width: 40%;
+    		}
+    	}
+
+    	@media only screen and (max-width: 320px)
+    	{
+    		body
+    		{
+    			background-color: lightblue;
+    			color: black;
+    		}
+    		p{
+    			font-size: 12px;
+    			color: black;
+    		}
+    		a{
+    			color: black;
+    			font-size: 15px;
+    		}
+    	} 
+        /*Animation*/
+    	@keyframes fadeIn
+    	{
+    		 0%
+    		 {
+    		 	opacity: 0;
+    		 }
+    		 100%
+    		 {
+    		 	opacity: 1;
+    		 }
+
+    	}
+
+
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+  <div class="navbar">
+  	<div class="logo">
+     	<h6 class="logocolor">Brand Name</h6>
+  </div>
+  <i class="fas fa-home"></i>
+  </div>
+  
+  <form method="post" class="container formx">
+  	 <h3>- Login -</h3>
+  	 <p style="text-align: center;">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  	 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+  	</p><br><br>
+  	<input type="text" name="username" placeholder="Username" class="form-control"><br>
+  	<input type="password" name="password" placeholder="Password" class="form-control"><br>
+  	<input type="submit" name="submit" value="Login" class="form-control btn">
+  	<div class="backlinks">
+  		 <a href="#">Terms to use</a>
+  		 <a href="signup.html">Create New account</a>
+  	</div>
+  </form>
+
+</body>
+</html>
